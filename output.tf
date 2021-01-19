@@ -13,3 +13,8 @@ output "subnet_id" {
     value = aws_subnet.demo_subnet.id
 }
 
+output "ssh_rule_id" {
+    description = "ID of the allow SSH security group"
+    value = aws_security_group.allow_ssh.id
+}
+
