@@ -5,7 +5,7 @@ output "vpc_id" {
 
 output "vpc_name" {
     description = "Name of the VPC"
-    value = aws_vpc.main_vpc.name
+    value = aws_vpc.main_vpc.tags["Name"]
 }
 
 output "subnet_id" {

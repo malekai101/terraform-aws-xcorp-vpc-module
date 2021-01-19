@@ -1,4 +1,3 @@
-
 resource "aws_vpc" "main_vpc" {
   cidr_block           = "10.0.0.0/16"
   enable_dns_hostnames = true
@@ -14,7 +13,7 @@ resource "aws_subnet" "demo_subnet" {
 
   tags = {
     Project = var.project_name
-    Name    = "${aws_vpc.main_vpc.name} subnet 0"
+    Name    = "${var.project_name} subnet 0"
   }
 }
 
